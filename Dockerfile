@@ -6,5 +6,5 @@ RUN mkdir ca && cd ca && mkdir certs csr private crl newcerts && chmod 700 priva
 COPY openssl_root.cnf /root/ca/openssl_root.cnf
 WORKDIR /root/ca/
 ENV PASSWORD=Password1
-RUN /bin/bash -c '/bin/echo -e "$PASSWORD\n\r" | openssl genrsa -aes256 -out private/root_private_key.pem -passout stdin && chmod 400 private/root_private_key.pem'
-RUN /bin/bash -c '/bin/echo -e "$PASSWORD\n\r" | openssl req -config openssl_root.cnf -key private/root_private_key.pem -passin stdin -new -x509 -days 365 -sha256 -extensions v3_ca -out certs/ca_cert.pem -subj "/C=US/ST=Washington/L=Seattle/O=ExampleCompany/CN=www.example.com"'
+COPY createCA.sh /usr/local/bin/createCA.sh
+RUN /usr/local/bin/createCA.sh
