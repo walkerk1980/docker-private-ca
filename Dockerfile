@@ -7,5 +7,4 @@ COPY openssl_root.cnf /root/ca/openssl_root.cnf
 WORKDIR /root/ca/
 ENV PASSWORD=Password1
 COPY createCA.sh /usr/local/bin/createCA.sh
-RUN chmod +x /usr/local/bin/createCA.sh
 RUN /usr/local/bin/createCA.sh
