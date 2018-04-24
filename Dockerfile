@@ -6,6 +6,7 @@ RUN mkdir ca && cd ca && mkdir certs csr private crl newcerts && chmod 700 priva
 COPY openssl_root.cnf /root/ca/openssl_root.cnf
 WORKDIR /root/ca/
 ENV PASSWORD=Password1
+ENV DOMAIN=example.com
 COPY startup.sh /usr/local/bin/startup.sh
 COPY createCA.sh /usr/local/bin/createCA.sh
 RUN /usr/local/bin/createCA.sh
