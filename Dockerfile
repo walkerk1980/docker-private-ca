@@ -3,7 +3,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::=
 RUN apt-get install -y openssl dnsutils nano tcpdump screen tmux
 WORKDIR /root/
 COPY ca /root/ca
-COPY ca/certs  ca/crl  ca/csr  ca/index.txt  ca/newcerts  ca/private  ca/serial /root/ca/
+COPY ca/certs/  ca/crl/  ca/csr/  ca/index.txt  ca/newcerts/  ca/private/  ca/serial/ /root/ca/
 COPY openssl_root.cnf /root/ca/openssl_root.cnf
 WORKDIR /root/ca/
 ENV PASSWORD=Password1
