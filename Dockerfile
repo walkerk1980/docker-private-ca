@@ -1,6 +1,7 @@
 FROM ubuntu
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confnew" --assume-yes -y --yes -f dist-upgrade
-RUN apt-get install -y openssl dnsutils nano tcpdump screen tmux
+RUN DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confnew" --assume-yes -y --yes -f install -y openssl dnsutils nano tcpdump screen tmux python-pip
+RUN /usr/bin/pip install awscli
 WORKDIR /root/
 COPY ca /root/ca
 COPY ca/certs/ ca/crl/  ca/csr/  ca/index.txt  ca/newcerts/  ca/private/  ca/serial/ /root/ca/
