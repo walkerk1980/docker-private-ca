@@ -5,14 +5,14 @@ default_ca = CA_default                                     # Point to default s
 [ CA_default ]
 # Directory and file locations.
 dir               = /root/ca                                 # File location
-certs             = /root/certs                              # Root certificate location
-new_certs_dir     = /root/newcerts                           # New certificates
-crl_dir           = /root/clr                                # Certificate revocation list
-database          = /root/index.txt                          # Database index file
-serial            = /root/serial                             # Serial numbers
-RANDFILE          = /root/private/.rand                      # Private random number file
-private_key       = /root/private/root_private_key.pem       # Private key
-certificate       = /root/certs/ca_cert.pem                  # CA certificate
+certs             = /root/ca/certs                              # Root certificate location
+new_certs_dir     = /root/ca/newcerts                           # New certificates
+crl_dir           = /root/ca/crl                                # Certificate revocation list
+database          = /root/ca/index.txt                          # Database index file
+serial            = /root/ca/serial                             # Serial numbers
+RANDFILE          = /root/ca/private/.rand                      # Private random number file
+private_key       = /root/ca/private/root_private_key.pem       # Private key
+certificate       = /root/ca/certs/ca_cert.pem                  # CA certificate
 default_md        = sha256                                            # Use SHA256 for signing
 default_days      = 365                                               # CA certificate period
 preserve          = no                                                # DN ordering
