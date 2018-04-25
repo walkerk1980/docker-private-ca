@@ -10,4 +10,5 @@ ENV PASSWORD=Password1
 ENV DOMAIN=example.com
 COPY startup.sh /usr/local/bin/startup.sh
 COPY createCA.sh /usr/local/bin/createCA.sh
+COPY cainfo.sh /usr/local/bin/cainfo.sh
 RUN /usr/local/bin/createCA.sh
