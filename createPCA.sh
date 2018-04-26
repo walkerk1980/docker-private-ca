@@ -20,6 +20,8 @@ command+=" --query CertificateAuthorityArn --output text"
 
 if [ ! -z "$1" ];then
  command+=" --region $1"
+else
+  command+=" --region $REGION"
 fi
 
 pca_arn=$($command)
