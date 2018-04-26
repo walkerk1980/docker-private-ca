@@ -5,7 +5,6 @@ RUN /usr/bin/pip install awscli
 WORKDIR /root/
 COPY ca /root/ca
 COPY pca /root/pca
-#COPY ca/certs/ ca/crl/  ca/csr/  ca/index.txt  ca/newcerts/  ca/private/  ca/serial/ /root/ca/
 COPY openssl_root.cnf /root/ca/openssl_root.cnf
 WORKDIR /root/ca/
 ENV PASSWORD=Password1
