@@ -30,3 +30,5 @@ echo -en "$pca_arn" >/root/pca/pca_arn.txt
 if [ ! -z "$1" ];then
  echo -en "$1" >/root/pca/pca_region.txt
 fi
+
+echo -e "\n\rNow run signPCA.sh\n\r"

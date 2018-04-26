@@ -4,7 +4,7 @@
   "Subject": 
     {"Country": "US",
      "Organization": "Example Corp",
-     "OrganizationalUnit": "Sales",
+     "OrganizationalUnit": "IT",
      "State": "WA",
      "Locality": "Seattle",
      "CommonName": "PCASUBJECT"}
