@@ -10,7 +10,7 @@ COPY openssl_root.cnf /root/ca/openssl_root.cnf
 WORKDIR /root/ca/
 ENV PASSWORD=Password1
 ENV DOMAIN=example.com
-COPY createpca.sh /usr/local/bin/createpca.sh
+COPY createPCA.sh /usr/local/bin/createPCA.sh
 COPY startup.sh /usr/local/bin/startup.sh
 COPY createCA.sh /usr/local/bin/createCA.sh
 COPY cainfo.sh /usr/local/bin/cainfo.sh
