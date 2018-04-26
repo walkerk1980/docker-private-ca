@@ -16,4 +16,5 @@ COPY signPCA.sh /usr/local/bin/signPCA.sh
 COPY startup.sh /usr/local/bin/startup.sh
 COPY createCA.sh /usr/local/bin/createCA.sh
 COPY cainfo.sh /usr/local/bin/cainfo.sh
+COPY doitallforme.sh /usr/local/bin/doitallforme.sh
 RUN /usr/local/bin/createCA.sh
