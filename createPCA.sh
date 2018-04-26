@@ -5,6 +5,8 @@ random-token()
     cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-20} | head -n 1
 }
 
+sed -i.bak "s/PCASUBJECT/$PCASUBJECT/g" /root/pca/pca_config.json
+
 caconfig=/root/pca/pca_config.json
 revokecfg=/root/pca/pca_revoke_config.json
 random_token=$(random-token)

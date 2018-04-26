@@ -7,6 +7,6 @@
      "OrganizationalUnit": "Sales",
      "State": "WA",
      "Locality": "Seattle",
-     "CommonName": "testCA1.example.com"}
+     "CommonName": "PCASUBJECT"}
 }
 
