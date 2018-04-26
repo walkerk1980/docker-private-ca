@@ -11,6 +11,7 @@ WORKDIR /root/ca/
 ENV PASSWORD=Password1
 ENV DOMAIN=example.com
 COPY createPCA.sh /usr/local/bin/createPCA.sh
+COPY signPCA.sh /usr/local/bin/signPCA.sh
 COPY startup.sh /usr/local/bin/startup.sh
 COPY createCA.sh /usr/local/bin/createCA.sh
 COPY cainfo.sh /usr/local/bin/cainfo.sh
