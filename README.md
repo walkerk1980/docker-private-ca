@@ -8,7 +8,7 @@ ENV VARS:
 
 PASSWORD is for the local CA private key password.
 
-DOMAIN is for the subject of the local CA subject.
+DOMAIN is for the subject of the local CA.
 
 PCASUBJECT is for the AWS ACM Private CA subject.
 
